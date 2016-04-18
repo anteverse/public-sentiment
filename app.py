@@ -95,6 +95,7 @@ def test_db_query():
 
     db['locations'].drop_indexes()
     db['locations'].create_index([("loc", pymongo.GEO2D)], name='geo_index')
+    print 'index OK'
     rows = []
     try:
         rows = db['locations'].find({"loc": SON([('$near', [-90.262, 38.640]), ('$maxDistance', 3)])})
@@ -104,7 +105,7 @@ def test_db_query():
     return rows
 
 if __name__ == "__main__":
-    # print test_db_query()
+    test_db_query()
     # print list(test_db_query())
     app = web.application(urls, globals())
     app.run()
