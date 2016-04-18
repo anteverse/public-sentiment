@@ -75,10 +75,10 @@ The analysis is done under the method `sentiment_analysis`, and then stored in M
 Documents format:
 ```json
 {
-    "_id": ObjectId(),
+    "_id": "ObjectId()",
     "text": "text from tweet",
-    "polarity": from -1.0 to 1.0,
-    "loc": [longitude, latitude]
+    "polarity": "from -1.0 to 1.0",
+    "loc": ["longitude", "latitude"]
 }
 ```
 From this point listener and analyzer(s) are up and running.
@@ -120,6 +120,7 @@ It return a document of that form:
 #### Tests
 You can run the _almost empty_ test_app.sh to test the API.
 
-License:
-Please refer to license document.
+License
+-----------
+Please refer to the license document.
 
